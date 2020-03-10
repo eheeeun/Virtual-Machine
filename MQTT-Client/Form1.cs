@@ -17,7 +17,7 @@ namespace MQTT_Client
     {
         private delegate void myUICallBack(string myStr, TextBox ctl);
         static MqttClient client;
-        private void myUI(string myStr, TextBox ctl)
+        private void myUI(string myStr, TextBox ctl) // whole UI updating function
         {
             if (this.InvokeRequired)
             {
