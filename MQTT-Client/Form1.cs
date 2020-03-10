@@ -66,7 +66,7 @@ namespace MQTT_Client
             {                
                 try
                 {
-                    client = new MqttClient(HostTextBox.Text, port, false, null);
+                    client = new MqttClient(HostTextBox.Text, port, false, null); //
                     client.Connect(Guid.NewGuid().ToString());
                     client.MqttMsgPublishReceived += new MqttClient.MqttMsgPublishEventHandler(client_MqttMsgPublishReceived);
                 }
