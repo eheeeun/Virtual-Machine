@@ -13,17 +13,51 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+/* default 에서 추가 using */
+
+using System.ComponentModel;
+using System.Drawing;
+using System.Net;
+using uPLibrary.Networking.M2Mqtt;
+using uPLibrary.Networking.M2Mqtt.Messages;
+
 namespace client
-{
+{  
     /// <summary>
     /// MainWindow.xaml에 대한 상호 작용 논리
     /// </summary>
     public partial class MainWindow : Window
     {
+        private delegate void myUICallBack(string myStr, TextBox ctl);  // UIcallback method declaration
+        static MqttClient client;                                       // MQTT Client type client 
+        
         public MainWindow()
         {
             InitializeComponent();
-            this.Background = Brushes.AliceBlue;
+            
+        }
+        private void Publish() { // publish function
+            client.Publish("state/temperature", Encoding.UTF8.GetBytes("24℃"), (byte)2, false); // temperature
+            client.Publish("state/humidity", Encoding.UTF8.GetBytes("50%"), (byte)2, false); // temperature
+        
+        }
+
+        private void ConnectButton_Click(object sender, EventArgs e) {
+            if (ConnectButton.Content.Equals("Connect") == true) {
+                ConnectButton.Content = "Disconnect";
+                client = new MqttClient("192.168.0.20", 1883, false, null);
+                client.Connect(Guid.NewGuid().ToString());
+                Publish();
+            }
+            else if (ConnectButton.Content.Equals("Disconnect") == true){
+                ConnectButton.Content = "Connect";
+                client.Disconnect();
+            }
+        }
+
+        private void Sleep(int v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

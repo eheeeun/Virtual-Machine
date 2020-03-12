@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:client"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ControlTemplate TargetType="Button" x:Key="square">
+            <Border Background="#FF99DD99" CornerRadius="10">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+        <Style TargetType="Button" x:Key="GreenButton" >
+            <Setter Property="Template" Value="{StaticResource square}"/>
+        </Style>
     </Application.Resources>
 </Application>
