@@ -1,9 +1,10 @@
-﻿<Window x:Class="client.MainWindow"
+<Window x:Class="client.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:client"
+     
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
@@ -66,9 +67,8 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="32*"></RowDefinition>
-            <RowDefinition Height="115*"></RowDefinition>
-            <RowDefinition Height="174*"/>
+            <RowDefinition Height="15*"></RowDefinition>
+            <RowDefinition Height="120*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50*"/>
@@ -98,6 +98,12 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center">
         </ToggleButton>
+        <ProgressBar
+            Grid.Row="1" Grid.Column="1"
+            Width="50" Height="250"
+            Orientation="Vertical"
+            >
+        </ProgressBar>
     </Grid>
 </Window>
 <!-- ToggleButton 태그에 들어가잇던거 
