@@ -1,11 +1,11 @@
-﻿<UserControl x:Class="Thermometer.UserControl1"
+<UserControl x:Class="Thermometer.UserControl1"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Thermometer"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="292.667" d:DesignWidth="95.333">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -31,5 +31,11 @@
                 Height="{Binding TemperatureHeight}"
                 Margin="3,0,3,0"/>
         </Grid>
+        <!-- 그래프 좌측 숫자 표기 -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding MaxTemperatureStr, FallbackValue=40°C}" FontSize="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding MaxTemperatureStr, FallbackValue=15°C}" FontSize="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding MinTemperatureStr, FallbackValue=-10°C}" FontSize="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <!-- 그래프 하단 숫자 표기 -->
+        <TextBlock Grid.Row="1" Grid.Column="1"  Grid.RowSpan="2" Grid.ColumnSpan="1" Text="{Binding TemperatureText, FallbackValue=-30°C}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>
