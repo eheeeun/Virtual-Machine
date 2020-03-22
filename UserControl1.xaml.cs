@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +20,16 @@ namespace Thermometer
     /// </summary>
     public partial class UserControl1 : UserControl
     {
+        public static readonly DependencyProperty TemperatureProperty =
+            DependencyProperty.Register(
+                "Temperature", 
+                typeof(double), 
+                typeof(UserControl1), 
+                new PropertyMetadata(37.0)
+            );
         public UserControl1()
         {
+            this.DataContext = this;
             InitializeComponent();
         }
     }
