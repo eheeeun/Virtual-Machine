@@ -7,11 +7,11 @@ using System.Windows;
 // 어셈블리에 대한 일반 정보는 다음 특성 집합을 통해 
 // 제어됩니다. 어셈블리와 관련된 정보를 수정하려면
 // 이러한 특성 값을 변경하세요.
-[assembly: AssemblyTitle("client")]
+[assembly: AssemblyTitle("Thermometer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("client")]
+[assembly: AssemblyProduct("Thermometer")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -27,18 +27,17 @@ using System.Windows;
 //사용하는 경우 <UICulture>를 en-US로 설정합니다. 그런 다음 아래
 //NeutralResourceLanguage 특성의 주석 처리를 제거합니다. 아래 줄의 "en-US"를 업데이트하여
 //프로젝트 파일의 UICulture 설정과 일치시킵니다.
-[assembly: Guid("1aa0de1a-5aa9-4b1f-a55c-c4e494d318ba")]
 
 //[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
 
-[assembly: ThemeInfo(
+[assembly:ThemeInfo(
     ResourceDictionaryLocation.None, //테마별 리소스 사전의 위치
-                                     //(페이지, 앱 또는 모든 테마별 리소스 사전에 
-                                     // 리소스가 없는 경우에 사용됨)
+                             //(페이지, 앱 또는 모든 테마별 리소스 사전에 
+                             // 리소스가 없는 경우에 사용됨)
     ResourceDictionaryLocation.SourceAssembly //제네릭 리소스 사전의 위치
-                                              //(페이지, 앱 또는 모든 테마별 리소스 사전에 
-                                              // 리소스가 없는 경우에 사용됨)
+                                      //(페이지, 앱 또는 모든 테마별 리소스 사전에 
+                                      // 리소스가 없는 경우에 사용됨)
 )]
 
 
