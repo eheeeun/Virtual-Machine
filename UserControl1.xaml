@@ -23,9 +23,16 @@
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <!-- tube -->
+            <Rectangle 
+                Grid.Column="1"
+                RadiusX="5" RadiusY="5"
+                Name="temperatureTube"
+                />
+            <!-- contents -->
             <Rectangle 
                 Grid.Column="1" 
-                RadiusX="10" 
+                RadiusX="10" RadiusY="10"
                 Fill="Red" 
                 VerticalAlignment="Bottom"
                 Height="{Binding TemperatureHeight}"
