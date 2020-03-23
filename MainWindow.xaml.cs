@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,14 +31,23 @@ namespace client
         private delegate void myUICallBack(string myStr, TextBox ctl);  // UIcallback method declaration
         static MqttClient client;                                       // MQTT Client type client 
         
+        /* user control .dll 추가하고 변수 추가 03/32 */
+        Thermometer.UserControl1 thermometer;
+
         public MainWindow()
         {
             InitializeComponent();
+            GetThermometer();                                           // usercontrol call 
             
+        }
+        private void GetThermometer()
+        {
+            thermometer = new Thermometer.UserControl1();
+            Temperature.Content = thermometer;
         }
         private void Publish() { // publish function
             client.Publish("state/temperature", Encoding.UTF8.GetBytes("24℃"), (byte)2, false); // temperature
-            client.Publish("state/humidity", Encoding.UTF8.GetBytes("50%"), (byte)2, false); // temperature
+            client.Publish("state/humidity", Encoding.UTF8.GetBytes("50%"), (byte)2, false);     // humidity
         
         }
 
