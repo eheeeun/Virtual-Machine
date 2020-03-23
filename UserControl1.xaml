@@ -32,11 +32,12 @@
             <!-- contents -->
             <Rectangle 
                 Grid.Column="1" 
-                RadiusX="10" RadiusY="10"
                 Fill="Red" 
                 VerticalAlignment="Bottom"
                 Height="{Binding TemperatureHeight}"
-                Margin="3,0,3,0"/>
+                Margin="3,0,3,10"
+                />
+            <!-- 위에 Rectagle 태그 안에 있던거 " RadiusX="10" RadiusY="10" -->
         </Grid>
         <!-- 그래프 좌측 숫자 표기 -->
         <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding MaxTemperatureStr, FallbackValue=40°C}" FontSize="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
