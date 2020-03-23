@@ -51,7 +51,6 @@ namespace Thermometer /* mid온도 값 위한 메서드 및 변수 추가 */
                 NotifyPropertyChanged(nameof(MinTemperatureStr));
             }
         }
-        // midtemp 추가
         private double midTemp = 15.0;
         public double MidTemperature
         {
@@ -77,15 +76,6 @@ namespace Thermometer /* mid온도 값 위한 메서드 및 변수 추가 */
                 NotifyPropertyChanged(nameof(MaxTemperatureStr));
             }
         }
-
-        public static readonly DependencyProperty TemperatureProperty =
-            DependencyProperty.Register(
-                "Temperature", 
-                typeof(double), 
-                typeof(UserControl1), 
-                new PropertyMetadata(37.0)
-            );
-
         public string MinTemperatureStr
         {
             get { return $"{(int)minTemp}°" + (isCelsius ? "C" : "F"); }
@@ -99,12 +89,23 @@ namespace Thermometer /* mid온도 값 위한 메서드 및 변수 추가 */
             get { return $"{(int)maxTemp}°" + (isCelsius ? "C" : "F"); }
         }
 
+        // ===================================================================== //
+
+        public static readonly DependencyProperty TemperatureProperty = // 의존 프로퍼티 읽기 전용 필드 생성
+            DependencyProperty.Register(
+                "Temperature",
+                typeof(double),
+                typeof(UserControl),
+                new PropertyMetadata(20.0)
+            );
+
         private double temperatureStep = 1;
         public double TemperatureHeight
         {
             get {
-                return bulb != null ? 
-                    ((Temperature - minTemp) * temperatureStep) + (bulb.ActualHeight / 2) : ((Temperature - minTemp) * temperatureStep); }
+                return 
+                    bulb != null ? 
+                    ((Temperature - minTemp) * temperatureStep) + (bulb.ActualHeight / 2) : ((Temperature - minTemp) * temperatureStep);}
         }
         public string TemperatureText
         {
