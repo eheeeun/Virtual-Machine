@@ -40,9 +40,10 @@
         </Grid>
         <!-- 그래프 좌측 숫자 표기 -->
         <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding MaxTemperatureStr, FallbackValue=40°C}" FontSize="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding MaxTemperatureStr, FallbackValue=15°C}" FontSize="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding MidTemperatureStr, FallbackValue=15°C}" FontSize="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding MinTemperatureStr, FallbackValue=-10°C}" FontSize="10" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
         <!-- 그래프 하단 숫자 표기 -->
+        <Ellipse Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="1" Name="bulb"/>
         <TextBlock Grid.Row="1" Grid.Column="1"  Grid.RowSpan="2" Grid.ColumnSpan="1" Text="{Binding TemperatureText, FallbackValue=20°C}" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>
