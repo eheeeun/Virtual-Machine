@@ -15,11 +15,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
-/*
-    TemperatureProperty 값을 계속 바꾸는 메서드 추가 필요 03/24
-    
-*/
 namespace Thermometer /* mid온도 값 위한 메서드 및 변수 추가 */
 {
     /// <summary>
@@ -30,6 +25,9 @@ namespace Thermometer /* mid온도 값 위한 메서드 및 변수 추가 */
         /* 속성 변경알림 구현 https://docs.microsoft.com/ko-kr/dotnet/framework/wpf/data/how-to-implement-property-change-notification */
         public event PropertyChangedEventHandler PropertyChanged;
         public void NotifyPropertyChanged([CallerMemberName]string name = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+
+        /* 온도 변경 알림  */
+        public static event PropertyChangedEventHandler TempPropertyChanged;
 
         private bool isCelsius = true;
         public bool IsCelsius
@@ -95,15 +93,26 @@ namespace Thermometer /* mid온도 값 위한 메서드 및 변수 추가 */
         }
 
         // ===================================================================== //
+        /*
+        public static readonly DependencyProperty TemperatureProperty = // 의존 프로퍼티 읽기 전용 필드 생성
+            DependencyProperty.Register(
+                "Temperature",
+                typeof(double),
+                typeof(UserControl),
+                new PropertyMetadata(20.0));
+                */
+        private static void OnTemperatureChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            // Perform event handler logic 여기서 temperatureproperty를 바꿀 방법?
+        }
 
         public static readonly DependencyProperty TemperatureProperty = // 의존 프로퍼티 읽기 전용 필드 생성
             DependencyProperty.Register(
                 "Temperature",
                 typeof(double),
                 typeof(UserControl),
-                new PropertyMetadata(20.0)
-            );
-
+                new PropertyMetadata(0, new PropertyChangedCallback(OnTemperatureChanged)));
+        
         private double temperatureStep = 1;
         public double TemperatureHeight
         {
@@ -116,13 +125,14 @@ namespace Thermometer /* mid온도 값 위한 메서드 및 변수 추가 */
         {
             get { return $"{(int)Temperature}°" + (isCelsius ? "C" : "F"); }
         }
+        
 
         public double Temperature
         {
             get { return (double)GetValue(TemperatureProperty); }
             set { SetValue(TemperatureProperty, value); }
         }
-
+        
         public UserControl1()
         {
             this.DataContext = this;
