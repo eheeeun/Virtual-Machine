@@ -15,6 +15,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+/*
+    TemperatureProperty 값을 계속 바꾸는 메서드 추가 필요 03/24
+    
+*/
 namespace Thermometer /* mid온도 값 위한 메서드 및 변수 추가 */
 {
     /// <summary>
