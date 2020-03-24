@@ -103,15 +103,15 @@ namespace Thermometer /* mid온도 값 위한 메서드 및 변수 추가 */
                 */
         private static void OnTemperatureChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            // Perform event handler logic 여기서 temperatureproperty를 바꿀 방법?
+            UserControl uc = (UserControl)d; // User Control Type added
         }
 
-        public static readonly DependencyProperty TemperatureProperty = // 의존 프로퍼티 읽기 전용 필드 생성
+        public static /*readonly*/ DependencyProperty TemperatureProperty = // 의존 프로퍼티 읽기 전용 필드 생성
             DependencyProperty.Register(
                 "Temperature",
                 typeof(double),
                 typeof(UserControl),
-                new PropertyMetadata(0, new PropertyChangedCallback(OnTemperatureChanged)));
+                new PropertyMetadata(20.0, new PropertyChangedCallback(OnTemperatureChanged)));
         
         private double temperatureStep = 1;
         public double TemperatureHeight
