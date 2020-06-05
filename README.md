@@ -4,7 +4,7 @@ All the files are developed in Windows enviroment
 
 
 origin system : https://github.com/CHong777/teamLCH
-(graduation work)
+(  <- graduation work)
 
 main revision : 
 
