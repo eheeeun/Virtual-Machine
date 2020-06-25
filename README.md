@@ -2,6 +2,7 @@
 The whole revision of already developed IoT System.
 All the files are developed in Windows enviroment
 
+Use MQTT broker service;
 
 origin system : https://github.com/CHong777/teamLCH
 (  <- graduation work)
