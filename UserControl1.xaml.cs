@@ -158,3 +158,5 @@ namespace Thermometer /* mid온도 값 위한 메서드 및 변수 추가 */
 
     }
 }
+// 참고
+//https://github.com/Corey255A1/MiscWPFControls/blob/master/MiscWPFControls/Controls/Thermometer/Thermometer.xaml
