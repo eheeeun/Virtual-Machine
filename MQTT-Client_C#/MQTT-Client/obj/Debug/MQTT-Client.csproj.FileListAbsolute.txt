@@ -1,9 +1,0 @@
-C:\Users\HeeEun\Downloads\MQTT-Client-master(c#-cho)\MQTT-Client-master\MQTT-Client\MQTT-Client\bin\Debug\MQTT-Client.exe
-C:\Users\HeeEun\Downloads\MQTT-Client-master(c#-cho)\MQTT-Client-master\MQTT-Client\MQTT-Client\bin\Debug\MQTT-Client.pdb
-C:\Users\HeeEun\Downloads\MQTT-Client-master(c#-cho)\MQTT-Client-master\MQTT-Client\MQTT-Client\bin\Debug\M2Mqtt.dll
-C:\Users\HeeEun\Downloads\MQTT-Client-master(c#-cho)\MQTT-Client-master\MQTT-Client\MQTT-Client\obj\Debug\MQTT-Client.csprojResolveAssemblyReference.cache
-C:\Users\HeeEun\Downloads\MQTT-Client-master(c#-cho)\MQTT-Client-master\MQTT-Client\MQTT-Client\obj\Debug\MQTT_Client.Form1.resources
-C:\Users\HeeEun\Downloads\MQTT-Client-master(c#-cho)\MQTT-Client-master\MQTT-Client\MQTT-Client\obj\Debug\MQTT_Client.Properties.Resources.resources
-C:\Users\HeeEun\Downloads\MQTT-Client-master(c#-cho)\MQTT-Client-master\MQTT-Client\MQTT-Client\obj\Debug\MQTT-Client.csproj.GenerateResource.Cache
-C:\Users\HeeEun\Downloads\MQTT-Client-master(c#-cho)\MQTT-Client-master\MQTT-Client\MQTT-Client\obj\Debug\MQTT-Client.exe
-C:\Users\HeeEun\Downloads\MQTT-Client-master(c#-cho)\MQTT-Client-master\MQTT-Client\MQTT-Client\obj\Debug\MQTT-Client.pdb
