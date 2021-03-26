@@ -1,13 +1,5 @@
-# Complementation-of-IoT-system
-The whole revision of already developed IoT System.
-All the files are developed in Windows enviroment
+# Typescript
 
-Use MQTT broker service;
-
-origin system : https://github.com/CHong777/teamLCH
-(  <- graduation work)
-
-main revision : 
-
-1. Language is changed'java' to 'C#'.
-2. Changed client interface
+Before start,
+1. install npm
+2. install nodejs
