@@ -11,7 +11,7 @@ Before start,
     
 process
 1. Make .ts file
-2. Compile using 'tsc'
+2. Compile using 'tsc' (exactly trnspiling)
 3. Check the .js file by compiling
 
 
