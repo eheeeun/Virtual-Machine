@@ -5,6 +5,8 @@ Before start,
 2. install nodejs
 3. install typescript
     npm install -g typescript
+4. check version
+    tsc -v
     
     
 process
