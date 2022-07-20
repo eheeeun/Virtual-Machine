@@ -1,0 +1,14 @@
+1. git init & repo init
+
+1). git init 
+.git 이라는 하위 폴더를 생성하여 해당 폴더를 git으로 관리할 수 있게 해주는 명령어 입니다.
+.git 폴더 내에는 프로젝트 관리를 위해 필요한 내용을 담는 내용물로 구성되어 있습니다.
+
+2). repo init : repo를 현재 폴더에 설치하는 명령어
+.repo 폴더를 생성하여 안에 git 저장소를 넣게된다.
+또한 manifext.xml을 포함하게 되어 이 .repo/manifests에 심볼릭 링크로 연결되어 있다.
+
+option
+-u : manifests repository의 url 지정
+-m : 저장소에서 manifest 파일을 선택할 수 있다. (지정 안 한다면 default.xml 선택)
+-b : revision 선택 (특정 manifest의 master-branch 선택)
